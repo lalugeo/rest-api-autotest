@@ -4,7 +4,7 @@
   "description": "Library for automatic RESTful api testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/gulp unit-testing"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
     "eslint-plugin-react": "^7.4.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^4.0.2",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-mocha": "^6.0.0",
     "jsdoc": "^3.5.5"
   }
 }
