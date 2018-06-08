@@ -7,9 +7,9 @@ node_js:
 stages:
   - linting
   - unit-testing
-  - documentation
+  - name: documentation
     if: branch = master
-  - npm-publish
+  - name: npm-publish
     if: branch = master
 before_script:
   - npm install -g gulp-cli
