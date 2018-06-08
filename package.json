@@ -1,0 +1,29 @@
+{
+  "name": "rest-api-autotest",
+  "version": "0.0.1",
+  "description": "Library for automatic RESTful api testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalugeo/rest-api-autotest.git"
+  },
+  "author": "Lalu George <lalugeorge88@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lalugeo/rest-api-autotest/issues"
+  },
+  "homepage": "https://github.com/lalugeo/rest-api-autotest#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "gulp": "^3.9.1",
+    "jsdoc": "^3.5.5"
+  }
+}
