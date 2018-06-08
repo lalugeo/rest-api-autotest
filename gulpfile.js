@@ -8,8 +8,8 @@ gulp.task('linting', () => gulp.src('./**/*.js')
   .pipe(eslint.format())
   .pipe(eslint.failAfterError()));
 
-gulp.task('unit-testing', () => gulp.src('test/**/*.js', { read: false })
+gulp.task('unit-testing', () => gulp.src('./test/**/*.js', { read: false })
   .pipe(mocha({ reporter: 'nyan' })));
 
-gulp.task('documentation', () => gulp.src('./src/**/*.js', { read: false })
+gulp.task('documentation', () => gulp.src('./**/*.js', { read: false })
   .pipe(jsdoc()));
