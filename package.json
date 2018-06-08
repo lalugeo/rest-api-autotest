@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lalugeo/rest-api-autotest#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.3",
+    "chai": "^4.1.2",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.7.0",
@@ -27,6 +28,7 @@
     "gulp-eslint": "^4.0.2",
     "gulp-jsdoc3": "^2.0.0",
     "gulp-mocha": "^6.0.0",
-    "jsdoc": "^3.5.5"
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0"
   }
 }
