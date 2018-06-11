@@ -17,8 +17,7 @@ jobs:
     - stage: unit-testing
       script: "gulp unit-testing"
     - stage: coverage
-      script: "npm run coverage"
-      script: "npm run send_coverage"
+      script: "npm run coverage && npm run send_coverage"      
     - stage: documentation
       script: "gulp documentation"
     - stage: npm-publish
