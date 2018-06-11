@@ -3,6 +3,7 @@ node_js: '8'
 stages:
   - linting
   - unit-testing
+  - coverage
   - name: documentation
     if: branch = master
   - name: npm-publish
@@ -15,6 +16,8 @@ jobs:
       script: "gulp linting"
     - stage: unit-testing
       script: "gulp unit-testing"
+    - stage: coverage
+      script: "npm run coverage && npm run send_coverage"
     - stage: documentation
       script: "gulp documentation"
     - stage: npm-publish
@@ -23,6 +26,6 @@ jobs:
         provider: npm
         email: lalugeorge88@gmail.com
         api_key:
-          secure: fQ4P3nrBkM1BdK+pNdIxbhEqoJzz6yQnl5M0hG03AW5XDSeDXO7YHgdMvxz4RWayO+vKBDqWOHxGFMtuNwJmLETErpaJscet2BfPSibokNlWqGFuxlH19a6hBDL1bPwj7rGZROGdvkfwZAfLcBVSiKkS8pGTXExgXVG0cWaQ9PFgjM3UlL9uprBc6yEcZcE1iyBiINmYUPc/MsV8oBhKONL/krOb2txqY8OB+nbdM9WrXHRHveVqXkNBoy2n/gaTVVon31KlHkBJhQ5tJbFuquCUtRCIVjYz1tPcc6bukqqHF3j25FP+oip4x2lpXyAj7LR7+HFKN+hY/yoS2MNzDvXO1rB3/r8BRQRuM8BvUBUpd5FOXvmHzFEfuuAC4qArzRPOOWfNsLSn1OU8hsGqGBKhX1gXDcCxV/T4NwM9SUDjEXzKPUF7+U4yTApcJ7Aq2nzkp4oATPTKWUCNdsPwnJacN4F0WiaroDiQeCIbA6uivl0pjMR2ZdFEZcR6eTv4uJUL+Du2b6sbvtQwjZDHvUdp1gZGqXeHg8ZwBXedYWY0C8ZUwIuBDSl7WnKIVlZwefriaLWTppJCcKIh8LVFRIwtUbynCA+nj8oYe3zHKOsbqv7CfWagyM5Kt75NPhIZlDXmop37P0EZJuu2By6BNTPERZyn/kttJl1gVNzpJc0=
+          secure: $NPM_API_KEY
         on:
           branch: master
