@@ -1,6 +1,6 @@
 {
   "name": "rest-api-autotest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library for automatic RESTful api testing",
   "main": "index.js",
   "scripts": {
