@@ -25,7 +25,6 @@ jobs:
       deploy:
         provider: npm
         email: lalugeorge88@gmail.com
-        api_key:
-          secure: $NPM_API_KEY
+        api_key: $NPM_API_KEY
         on:
           branch: master
