@@ -24,10 +24,10 @@ module.exports = (options) => {
     */
     TestApi: (routeToCollection, url, checkSpecificOptions) => new Promise((resolve, reject) => {
       const listOfChecksToPerform = [];
-      let urlProvided = false;
+      // let urlProvided = false;
 
       if (!routeToCollection) return reject(new Error('Route to Collection is not provided!'));
-      if (url) urlProvided = true;
+      // if (url) urlProvided = true;
 
       Object.assign(options, checkSpecificOptions);
       listOfChecksToPerform.push(uriChecks(options).Test(routeToCollection));
