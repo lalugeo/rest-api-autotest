@@ -1,10 +1,12 @@
 {
   "name": "rest-api-autotest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library for automatic RESTful api testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/gulp unit-testing",
+    "coverage": "./node_modules/.bin/nyc npm run test",
+    "send_coverage":"./node_modules/.bin/nyc report --reporter=text-lcov|\"./node_modules/.bin/coveralls\""
   },
   "repository": {
     "type": "git",
@@ -18,12 +20,19 @@
   "homepage": "https://github.com/lalugeo/rest-api-autotest#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.3",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "gulp": "^3.9.1",
-    "jsdoc": "^3.5.5"
+    "gulp-eslint": "^4.0.2",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-mocha": "^6.0.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
   }
 }
