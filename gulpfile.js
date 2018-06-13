@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
 const jsdoc = require('gulp-jsdoc3');
+const jsdocCfg = require('./jsdocConfig.json');
 
 gulp.task('linting', () => gulp.src('./**/*.js')
   .pipe(eslint())
@@ -11,5 +12,7 @@ gulp.task('linting', () => gulp.src('./**/*.js')
 gulp.task('unit-testing', () => gulp.src('./test/**/*.js', { read: false })
   .pipe(mocha({ reporter: 'nyan' })));
 
-gulp.task('documentation', () => gulp.src('./**/*.js', { read: false })
-  .pipe(jsdoc()));
+gulp.task('documentation', () => {
+  gulp.src('./**/*.js', { read: false })
+    .pipe(jsdoc(jsdocCfg));
+});
