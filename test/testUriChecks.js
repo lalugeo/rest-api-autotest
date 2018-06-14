@@ -4,16 +4,13 @@ const { expect } = require('chai');
 const uriChecks = require('../lib/uriChecks');
 
 describe('URI_CHECKS', () => {
-  it.only('URI_CHECKS_API_NAME - /api/something should pass', done =>
+  it('URI_CHECKS_API_NAME - /api/something should pass', () =>
     uriChecks().TestForApiName('/api/something')
       .then((resolved) => {
-        console.log('blah blah');
-        console.log(resolved);
         expect(resolved).to.equal('/api/something');
-        done();
       }));
 
-  it('URI_CHECKS_API_NAME - /api should fail', done =>
+  it('URI_CHECKS_API_NAME - /api should fail', () =>
     uriChecks().TestForApiName('/api')
       .then((resolved) => {
         expect(resolved).to.include({
@@ -22,10 +19,9 @@ describe('URI_CHECKS', () => {
           API_RAISED_ERROR: true,
           message: 'URI_CHECKS_API_NAME failed!',
         });
-        done();
       }));
 
-  it('URI_CHECKS_API_NAME - Ignore flag', done =>
+  it('URI_CHECKS_API_NAME - Ignore flag', () =>
     uriChecks({ URI_CHECKS_API_NAME: false }).TestForApiName('/api')
       .then((resolved) => {
         expect(resolved).to.include({
@@ -34,6 +30,5 @@ describe('URI_CHECKS', () => {
           API_RAISED_ERROR: true,
           message: 'URI_CHECKS_API_NAME failed!',
         });
-        done();
       }));
 });
