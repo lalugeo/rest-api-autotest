@@ -7,6 +7,8 @@ describe('URI_CHECKS', () => {
   it.only('URI_CHECKS_API_NAME - /api/something should pass', done =>
     uriChecks().TestForApiName('/api/something')
       .then((resolved) => {
+        console.log('blah blah');
+        console.log(resolved);
         expect(resolved).to.equal('/api/something');
         done();
       }));
